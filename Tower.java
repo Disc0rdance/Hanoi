@@ -22,9 +22,12 @@ public class Tower {
         }
     }
     
-    public void removeDisc() {
+    public int removeDisc() {
         if (tower.size() > 0) {
-            tower.remove(tower.size()-1);
+            return tower.remove(tower.size()-1).getR();
+        }
+        else {
+            return 0;
         }
     }
     
@@ -32,36 +35,16 @@ public class Tower {
         tower.add(d);
     }
     
-    public Disc topDisc(ArrayList<Disc> t) {
-        if (t.size() > 0) {
-            return t.get(t.size()-1);
+    public Disc topDisc() {
+        if (tower.size() > 0) {
+            return tower.get(tower.size()-1);
         }
         else {
             return null;
         }
     }
     
-    //Returns whether or not t2 has a larger disc at its top than t1 (null will be largest)
-    public boolean hasLargerDisc(ArrayList<Disc> t1, ArrayList<Disc> t2) {
-        if (topDisc(t2) == null && topDisc(t1) != null) {
-            return true;
-        }
-        else if (topDisc(t1) == null) {
-            return false;
-        }
-        else {
-            return (topDisc(t1).getR() < topDisc(t2).getR());
-        }
-    }
-    
-    
-    
-    public Tower sortStack(int n) {
-        if (n < 1) {
-            return this;
-        }
-        else {
-            return sortStack(n-1);
-        }
+    public int getNumOfDiscs() {
+        return tower.size();
     }
 }

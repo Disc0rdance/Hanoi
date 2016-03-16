@@ -13,7 +13,10 @@ public class Runner {
         t2 = new Tower();
         t3 = new Tower();
         
-        t1.fillTower1(10);
+        t1.fillTower(10);
     }
     
+    public void sort(int n) {
+        
+    }
 }
