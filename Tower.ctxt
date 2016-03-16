@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Tower()
+comment1.params=n
+comment1.target=java.util.ArrayList\ fillTower(int)
+comment2.params=
+comment2.target=void\ removeDisc()
+comment3.params=d
+comment3.target=void\ addDisc(Disc)
+comment4.params=t
+comment4.target=Disc\ topDisc(java.util.ArrayList)
+comment5.params=t1\ t2
+comment5.target=boolean\ hasLargerDisc(java.util.ArrayList,\ java.util.ArrayList)
+comment6.params=n
+comment6.target=Tower\ sortStack(int)
+numComments=7
