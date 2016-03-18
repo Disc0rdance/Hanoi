@@ -7,16 +7,34 @@ import java.util.ArrayList;
  */
 public class Runner {
     private Tower t1, t2, t3;
+    private int numDiscs;
     
-    public void main() {
+    public void main(int n) {
         t1 = new Tower();
         t2 = new Tower();
         t3 = new Tower();
         
-        t1.fillTower(10);
+        numDiscs = n;
+        t1.fillTower(numDiscs);
     }
     
-    public void sort(int n) {
+    public void run() {
+        if (numDiscs % 2 == 0) {
+            sort1(numDiscs);
+        }
+        else {
+            sort2(numDiscs);
+        }
+    }
+    
+    public void sort1(int n) {
+        
+        if (n < 1) {
+            
+        }
+    }
+    
+    public void sort2(int n) {
         
     }
 }

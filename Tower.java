@@ -47,4 +47,9 @@ public class Tower {
     public int getNumOfDiscs() {
         return tower.size();
     }
+    
+    public boolean isSmallerThan(Tower t) {
+        return t.topDisc().getR() > this.topDisc().getR();
+    }
+    
 }

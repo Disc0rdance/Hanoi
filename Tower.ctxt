@@ -11,4 +11,6 @@ comment4.params=
 comment4.target=Disc\ topDisc()
 comment5.params=
 comment5.target=int\ getNumOfDiscs()
-numComments=6
+comment6.params=t
+comment6.target=boolean\ isSmallerThan(Tower)
+numComments=7
