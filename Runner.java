@@ -32,6 +32,9 @@ public class Runner {
         if (n < 1) {
             
         }
+        else {
+            t2.addDisc(t1.removeDisc());
+        }
     }
     
     public void sort2(int n) {

@@ -22,12 +22,12 @@ public class Tower {
         }
     }
     
-    public int removeDisc() {
+    public Disc removeDisc() {
         if (tower.size() > 0) {
-            return tower.remove(tower.size()-1).getR();
+            return tower.remove(tower.size()-1);
         }
         else {
-            return 0;
+            return null;
         }
     }
     
