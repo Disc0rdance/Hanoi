@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Runner {
     private Tower t1, t2, t3;
     private int numDiscs;
+    private int count;
     
     public void main(int n) {
         t1 = new Tower();
@@ -15,29 +16,39 @@ public class Runner {
         t3 = new Tower();
         
         numDiscs = n;
+        count = 0;
         t1.fillTower(numDiscs);
     }
     
-    public void run() {
-        if (numDiscs % 2 == 0) {
-            sort1(numDiscs);
-        }
-        else {
-            sort2(numDiscs);
-        }
-    }
-    
     public void sort1(int n) {
-        
-        if (n < 1) {
-            
+        if (n % 2 == 0) {
+            t2.addDisc(t1.removeDisc());
+            t3.addDisc(t1.removeDisc());
+            t3.addDisc(t2.removeDisc());
+            count += 3;
         }
         else {
             t2.addDisc(t1.removeDisc());
+            t1.addDisc(t3.removeDisc());
+            t2.addDisc(t3.removeDisc());
+            count += 3;
         }
+        sort1(n-1);
     }
     
     public void sort2(int n) {
-        
+        if (n % 2 != 0) {
+            t3.addDisc(t1.removeDisc());
+            t2.addDisc(t1.removeDisc());
+            t2.addDisc(t3.removeDisc());
+            count += 3;
+        }
+        else {
+            t3.addDisc(t1.removeDisc());
+            t1.addDisc(t2.removeDisc());
+            t3.addDisc(t2.removeDisc());
+            count += 3;
+        }
+        sort2(n-1);
     }
 }
